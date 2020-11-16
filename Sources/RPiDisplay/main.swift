@@ -23,8 +23,8 @@ var bus: [GPIOName] = [.P12,
 let display = LED1602Display(RS: .P21, RW: .P20, E: .P16, bus: bus )
 
 struct Display: ParsableCommand {
-	@Argument(default: '') var topLine: String
-	@Argument(default: '') var bottomLine: String
+	@Argument(default: "") var topLine: String
+	@Argument(default: "") var bottomLine: String
 
 	func run() {
 		display.displayOnTop (topLine)
